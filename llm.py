@@ -27,6 +27,16 @@ Style:
 - 1 frame for still objects. 2-4 frames only if motion is natural
   (blinking, flickering, bouncing); then set fps (2-8)."""
 
+# Words that get a hand-written description instead of being drawn literally.
+# Keys are lowercase; matching ignores case and surrounding spaces.
+CUSTOM = {
+    "nomin": "a cute anime-style girl's face, chibi proportions: East Asian, "
+             "warm brown hair with a fringe, big sparkly eye on one side and a "
+             "winking eye (a curved line) on the other, rosy blush cheeks, small "
+             "smile, and a bright yellow star beside her head. 2 frames: the star "
+             "twinkles (small then large), fps 3.",
+}
+
 # Palette is a list here (strict schemas can't express arbitrary dict keys);
 # it's converted to the on-disk dict form after parsing.
 SCHEMA = {
@@ -84,10 +94,11 @@ def generate(word, force=False):
     if path.exists() and not force:
         return sprites.load(path), path, ["cached"]
 
+    subject = CUSTOM.get(word.strip().lower(), word)
     feedback = None
     for attempt in range(2):
         try:
-            raw = _call(word, feedback)
+            raw = _call(subject, feedback)
             sprite, notes = sprites.repair(raw)
             break
         except (ValueError, KeyError) as e:
