@@ -1,0 +1,4 @@
+anthropic>=1.11
+streamlit
+pillow
+# Pi only: unicornhathd
