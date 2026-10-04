@@ -8,6 +8,8 @@ A Raspberry Pi with a 16×16 LED board that draws whatever word you type, using 
 
 Type a word (say *cat*) into a small web app from your phone or iPad. The app runs on the Raspberry Pi. It asks Claude to draw the word as 16×16 pixel art. Claude answers with a grid of letters, where each letter is one pixel and stands for one colour. The Pi then lights up the 256 LEDs on the Unicorn HAT HD to match.
 
+![Demo: typing a word in the app and the LED board drawing it](docs/demo.gif)
+
 - Sprites are saved, so a word you've drawn before shows up straight away from the gallery.
 - Sprites can have up to 4 frames, which makes simple animations like blinking or twinkling.
 - After setup, the Pi starts everything on its own when you plug it in. You only need a browser.
