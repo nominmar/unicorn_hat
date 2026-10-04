@@ -1,0 +1,14 @@
+# Runs display.py on boot and turns the LEDs off on shutdown.
+[Unit]
+Description=Unicorn HAT display
+After=multi-user.target
+
+[Service]
+User=nmargade
+WorkingDirectory=/home/nmargade/unicorn
+ExecStart=/home/nmargade/unicorn-env/bin/python display.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
