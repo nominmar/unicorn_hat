@@ -4,6 +4,7 @@ Never touches the LEDs; it only writes art/*.json and state.json.
 Run: streamlit run app.py --server.address 0.0.0.0 --server.port 8501
 """
 import json
+import subprocess
 
 import streamlit as st
 
@@ -86,3 +87,16 @@ if saved:
                  caption=[f"frame {i}" for i in range(n)] if n > 1 else None)
         if st.session_state.get("notes"):
             st.caption(" · ".join(st.session_state.notes))
+
+with st.expander("Power"):
+    st.caption("Shut down before unplugging, so the SD card doesn't get corrupted.")
+    if st.button("Shut down Pi", use_container_width=True):
+        try:
+            r = subprocess.run(["sudo", "-n", "shutdown", "-h", "now"], capture_output=True, text=True)
+            err = (r.stderr.strip() or f"exit code {r.returncode}") if r.returncode else None
+        except OSError as e:
+            err = str(e)
+        if err:
+            st.error(f"Couldn't shut down: {err}")
+        else:
+            st.success("Shutting down. Unplug once the green light stops blinking.")
