@@ -1,6 +1,5 @@
 __pycache__/
 *.tmp
 state.json
-art/
 .idea/workspace.xml
 unicorn-hat-hd/
