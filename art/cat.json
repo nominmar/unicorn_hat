@@ -1,0 +1,74 @@
+{
+ "name": "-cat",
+ "palette": {
+  "k": [
+   0,
+   0,
+   0
+  ],
+  "o": [
+   255,
+   140,
+   0
+  ],
+  "w": [
+   255,
+   255,
+   255
+  ],
+  "g": [
+   0,
+   255,
+   60
+  ],
+  "p": [
+   255,
+   80,
+   160
+  ],
+  "y": [
+   255,
+   220,
+   0
+  ]
+ },
+ "fps": 2,
+ "frames": [
+  [
+   "kkkkkkkkkkkkkkkk",
+   "kkokkkkkkkkkokkk",
+   "kkookkkkkkkookkk",
+   "kkopokkkkkopokkk",
+   "kkooooooooooookk",
+   "kkooooooooooookk",
+   "kooggoooooggoook",
+   "koogkoooooogkook",
+   "kooooooooooooook",
+   "kwwoooopppoooowk",
+   "kooooooopooooook",
+   "kwwooowooowoooow",
+   "kkooooowwwoooook",
+   "kkkooooooooookkk",
+   "kkkkooooooookkkk",
+   "kkkkkkkkkkkkkkkk"
+  ],
+  [
+   "kkkkkkkkkkkkkkkk",
+   "kkokkkkkkkkkokkk",
+   "kkookkkkkkkookkk",
+   "kkopokkkkkopokkk",
+   "kkooooooooooookk",
+   "kkooooooooooookk",
+   "kooooooooooooook",
+   "kooggoooooggoook",
+   "kooooooooooooook",
+   "kwwoooopppoooowk",
+   "kooooooopooooook",
+   "kwwooowooowoooow",
+   "kkooooowwwoooook",
+   "kkkooooooooookkk",
+   "kkkkooooooookkkk",
+   "kkkkkkkkkkkkkkkk"
+  ]
+ ]
+}
